@@ -1,0 +1,22 @@
+PROCEDURE sorting (var t : tab ;in1 : integer ; in2 : integer ;)
+VAR
+a : INTEGER ;
+BEGIN
+Aux := t [in1] ;
+t [in1] := t [in2]
+t [in1] :=a ;
+END;
+PROCEDURE tri (var t :tab ; n : INTEGER)
+VAR
+i, k : INTEGER ;
+BEGIN
+FOR i:=2  TO n   DO
+BEGIN
+k :=i ;
+WHILE ((k>1 )and (t[k] <t[k-1])) DO
+    BEGIN
+    sorting (t, k , k-1);
+    k :=k-1;
+END_WHILE
+END_FOR ;
+END;
